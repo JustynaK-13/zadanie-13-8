@@ -7,7 +7,7 @@ server.on('request', function (request, response) {
     response.setHeader("Content-Type", "text/html; charset=utf-8");
     if (request.method === 'GET' && request.url === '/hello') {
     	fs.readFile('./index.html', 'utf-8', function(err, data){
-        	response.write('<h1>Hello Client!</h1>');
+            response.write('<h1>Hello Client!</h1>');
             response.end();
         });
     } else {
