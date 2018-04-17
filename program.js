@@ -13,7 +13,7 @@ server.on('request', function (request, response) {
     } else {
     	fs.readFile('./index.html', 'utf-8', function(err, data){
             response.statusCode = 404;
-            response.write('<src=https://images.pexels.com/photos/160739/smilies-bank-sit-rest-160739.jpeg?auto=compress&cs=tinysrgb&h=350>');
+          response.write('<img src="https://images.pexels.com/photos/160739/smilies-bank-sit-rest-160739.jpeg?auto=compress&cs=tinysrgb&h=350">');
             response.end();
     	});
 	}
